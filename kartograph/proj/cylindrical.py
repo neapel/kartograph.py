@@ -29,7 +29,7 @@ class Cylindrical(Proj):
         self.sea = self.sea_coords()
 
         if lon0 != 0.0:
-            from Polygon import MultiPolygon as Poly
+            from kartograph.geometry.polygon import MultiPolygon as Poly
             self.inside_p = Poly(self.sea)
 
     def plot(self, polygon, truncate=True):
